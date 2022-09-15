@@ -1,0 +1,9 @@
+@import "src/styles/sizes";
+
+.boards-container {
+  display: inline-flex;
+  gap: $board-gap;
+  padding: 30px;
+  overflow: auto;
+  max-width: calc(100% - 30px);
+}

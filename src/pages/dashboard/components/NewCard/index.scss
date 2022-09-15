@@ -1,0 +1,19 @@
+@import "src/styles/sizes";
+@import "src/styles/colors";
+
+.new-card {
+  cursor: pointer;
+  border: dashed 2px $border-color;
+  border-radius: $board-radius;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  user-select: none;
+  height: 90px;
+
+  &__text {
+    font-size: 54px;
+    line-height: 54px;
+    align-self: center;
+  }
+}

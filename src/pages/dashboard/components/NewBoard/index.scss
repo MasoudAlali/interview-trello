@@ -1,0 +1,22 @@
+@import "src/styles/sizes";
+@import "src/styles/colors";
+
+.new-board {
+  cursor: pointer;
+  width: $board-width;
+  border: dashed 2px $border-color;
+  border-radius: $board-radius;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  user-select: none;
+  min-width: $board-width;
+  height: $card-height;
+  max-height: $card-height;
+
+  &__text {
+    font-size: 54px;
+    line-height: 0;
+    align-self: center;
+  }
+}

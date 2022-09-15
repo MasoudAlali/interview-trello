@@ -1,0 +1,19 @@
+@import "src/styles/colors";
+
+.input {
+  outline: none;
+  border: solid 1px $border-color;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+
+  &__label {
+    font-size: 12px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
