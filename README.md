@@ -4,7 +4,7 @@
 
 ### Description
 
-This project is based on task and requirements from InstaPro team
+This project is based on task and requirements from InstaPro team limited to `4 hours` time period
 
 * I used `yarn` for package management
 * `create-react-app` is starting point
@@ -12,7 +12,7 @@ This project is based on task and requirements from InstaPro team
 * Template I used for this application is `typescript` template of `CRA`
 * I added `scss` to project for easier styling
 * There is no other libraries except `ReactJS`, `uuid` and `moment`
-    * `moment` for show some dates in better style
+    * `moment`[^1] for show some dates in better style
     * `uuid` for managing cards and boards
 * some parts of logics in this application should be handled by backend, but I tried to manage them locally, so some
   parts in real application will be removed
@@ -53,8 +53,7 @@ so I will write here about how I did it to somehow describe steps I took
 7. after this step I needed some general components to be reused for `edit` and `add` flow, these components
    are `Select`, `Input` and `Modal`
 8. I needed some kind of structure to update my components based on `boardService` state which is not redux, so I
-   implemented some `event` and `listener` structure in that service (it could be in separate service, but time was
-   limited)
+   implemented some `event` and `listener` structure in that service[^2]
 9. to have some kind of `single source of truth` and `reactive` structure with connection to `boardService` I
    implemented `DashboardBoardsContext` using `React.createContext` and used it in different component with `useContext`
    api, so `DashboardBoardsProvider` is responsible to provide needed data and functions to handle data manipulations
@@ -107,7 +106,7 @@ for develop this project to be a real `Trello` I can think of below points:
         * if we gonna have some SEO content
         * or it can help us to have good structure to develop it in a team which everyone will follow patterns offered
           by `NextJS`
-        * It can have some internal (server to server) data fetching
+        * It can have some internal[^3] data fetching
         * etc ...
 * Improve designs a lot to make it more beautiful and user-friendly, and make it responsive
 * Improve models like `Card` and `Board` to have some parts like `Due date` and `ETA` and file and image attachments,
@@ -135,3 +134,10 @@ for develop this project to be a real `Trello` I can think of below points:
 * prefetch, suspense and debounce wherever we need it
 * use libraries like `Immutable` to remove some extra logics which can be handled in that library in good performance
 * etc...
+
+[^1] Here we don't necessarily need `MomentJS`, because our use-case is not too much to cover bundle size increase
+issue 
+
+[^2] It could be in separate service like `EventEmitter` service and would be used in Modal too, but time was limited
+
+[^3] Server to Server, independent of user network conditions page can be rendered in Server and user just fetch HTML
