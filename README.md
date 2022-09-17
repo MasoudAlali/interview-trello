@@ -135,9 +135,9 @@ for develop this project to be a real `Trello` I can think of below points:
 * use libraries like `Immutable` to remove some extra logics which can be handled in that library in good performance
 * etc...
 
-[^1] Here we don't necessarily need `MomentJS`, because our use-case is not too much to cover bundle size increase
+[^1]: Here we don't necessarily need `MomentJS`, because our use-case is not too much to cover bundle size increase
 issue 
 
-[^2] It could be in separate service like `EventEmitter` service and would be used in Modal too, but time was limited
+[^2]: It could be in separate service like `EventEmitter` service and would be used in Modal too, but time was limited
 
-[^3] Server to Server, independent of user network conditions page can be rendered in Server and user just fetch HTML
+[^3]: Server to Server, independent of user network conditions page can be rendered in Server and user just fetch HTML
